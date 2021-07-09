@@ -44,6 +44,7 @@ def fillfound():
                 if resp.history:
                     for respHistory in resp.history:
                         if respHistory.headers['Location'].endswith('/admin'):
+                            print("[x] Password has been found : \"%s\"" % pass_str)
                             pass_nb += 1
                             return pass_nb, pass_str
                         else:
